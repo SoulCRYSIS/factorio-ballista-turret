@@ -71,7 +71,7 @@ data:extend({
           },
           {
             type = "push-back",
-            distance = 0.2,
+            distance = 0.25,
           }
         }
       }
@@ -93,7 +93,7 @@ data:extend({
     },
     smoke = {
       {
-        name = "smoke-fast",
+        name = "smoke-explosion-particle",
         deviation = { 0.1, 0.1 },
         frequency = 1,
         position = { 0, 2 },
@@ -179,7 +179,7 @@ data:extend({
       }
     },
     light = { intensity = 1, size = 10, color = { r = 0.9, g = 0.7, b = 0.6 } },
-    smoke = "smoke-fast",
+    smoke = "smoke-explosion-particle",
     smoke_count = 2,
     smoke_slow_down_factor = 1
   },
@@ -320,7 +320,7 @@ data:extend({
     },
     smoke = {
       {
-        name = "smoke-explosion-particle",
+        name = "smoke-fast",
         deviation = { 0.1, 0.1 },
         frequency = 1,
         position = { 0, 2 },

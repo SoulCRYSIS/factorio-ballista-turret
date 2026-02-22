@@ -50,6 +50,7 @@ data:extend({
     category = "crafting",
     ingredients = {
       { type = "item", name = "processing-unit", amount = 4 },
+      { type = "item", name = "copper-cable",     amount = 8 },
       { type = "item", name = "steel-plate",     amount = 20 },
       { type = "item", name = "wood",            amount = 20 },
     },

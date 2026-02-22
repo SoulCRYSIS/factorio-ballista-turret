@@ -12,6 +12,10 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "crossbow",
+      },
+      {
+        type = "unlock-recipe",
         recipe = "steel-bolt",
       },
     },

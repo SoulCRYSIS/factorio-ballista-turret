@@ -1,7 +1,9 @@
 ## Features
 
+- Ballista turret
+- Crossbow (equipable)
 - 3 ammo types: Steel bolt, Charged bolt, Ignition bolt
-- New types of damage "piercing"
+- New types of damage "piercing", bypass any resistance
 
 ![](https://files.catbox.moe/ragqdk.mp4)
 
