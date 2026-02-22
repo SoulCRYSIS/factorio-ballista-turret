@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "ballista-technology",
-    icon = "__pirate-fleet-graphics__/icons/ballista-technology.png",
+    icon = "__ballista-turret__/graphics/icons/ballista-technology.png",
     icon_size = 256,
     effects =
     {
@@ -34,7 +34,7 @@ data:extend({
   {
     type = "technology",
     name = "bolt-damage-1",
-    icon = "__pirate-fleet-graphics__/icons/charged-bolt-technology.png",
+    icon = "__ballista-turret__/graphics/icons/charged-bolt-technology.png",
     icon_size = 256,
     effects =
     {
@@ -59,7 +59,7 @@ data:extend({
   {
     type = "technology",
     name = "bolt-damage-2",
-    icons = util.technology_icon_constant_damage("__pirate-fleet-graphics__/icons/bolt-technology.png"),
+    icons = util.technology_icon_constant_damage("__ballista-turret__/graphics/icons/bolt-technology.png"),
     icon_size = 256,
     effects =
     {
@@ -79,7 +79,7 @@ data:extend({
   {
     type = "technology",
     name = "bolt-damage-3",
-    icons = util.technology_icon_constant_damage("__pirate-fleet-graphics__/icons/bolt-technology.png"),
+    icons = util.technology_icon_constant_damage("__ballista-turret__/graphics/icons/bolt-technology.png"),
     icon_size = 256,
     effects =
     {
@@ -111,14 +111,14 @@ data:extend({
   {
     type = "technology",
     name = "bolt-speed-1",
-    icons = util.technology_icon_constant_speed("__pirate-fleet-graphics__/icons/bolt-technology.png"),
+    icons = util.technology_icon_constant_speed("__ballista-turret__/graphics/icons/bolt-technology.png"),
     icon_size = 256,
     effects =
     {
       {
         type = "gun-speed",
         ammo_category = "bolt",
-        modifier = 0.2
+        modifier = 0.25
       },
     },
     prerequisites = { "bolt-damage-2" },
@@ -137,13 +137,13 @@ data:extend({
       },
       time = 60
     },
-    max_level = 10,
+    max_level = 8,
     upgrade = true
   },
   {
     type = "technology",
     name = "ignition-bolt-technology",
-    icon = "__pirate-fleet-graphics__/icons/ignition-bolt-technology.png",
+    icon = "__ballista-turret__/graphics/icons/ignition-bolt-technology.png",
     icon_size = 256,
     effects =
     {
@@ -152,7 +152,7 @@ data:extend({
         recipe = "ignition-bolt",
       },
     },
-    prerequisites = { "bolt-damage-2", "flammables" },
+    prerequisites = { "bolt-damage-2", "flamethrower" },
     unit =
     {
       count = 1000,

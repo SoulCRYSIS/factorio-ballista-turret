@@ -8,14 +8,14 @@ data:extend({
   {
     type = "ammo-category",
     name = "bolt",
-    icon = "__pirate-fleet-graphics__/icons/steel-bolt.png",
+    icon = "__ballista-turret__/graphics/icons/steel-bolt.png",
     subgroup = "ammo-category"
   },
   -- Steel bolt
   {
     type = "ammo",
     name = "steel-bolt",
-    icon = "__pirate-fleet-graphics__/icons/steel-bolt.png",
+    icon = "__ballista-turret__/graphics/icons/steel-bolt.png",
     order = "va",
     ammo_category = "bolt",
     subgroup = "ammo",
@@ -44,7 +44,7 @@ data:extend({
     flags = { "not-on-map" },
     hidden = true,
     acceleration = 0,
-    turn_speed = 0.001,
+    turn_speed = 0.01,
     action =
     {
       type = "direct",
@@ -67,7 +67,7 @@ data:extend({
           },
           {
             type = "damage",
-            damage = { amount = 500, type = "piercing" }
+            damage = { amount = 1000, type = "piercing" }
           },
           {
             type = "push-back",
@@ -77,14 +77,14 @@ data:extend({
       }
     },
     animation = {
-      filename = "__pirate-fleet-graphics__/entities/ballista-turret/steel-bolt-projectile.png",
+      filename = "__ballista-turret__/graphics/entities/steel-bolt-projectile.png",
       width = 16,
       height = 210,
       scale = 0.5,
       priority = "high",
     },
     shadow = {
-      filename = "__pirate-fleet-graphics__/entities/ballista-turret/steel-bolt-projectile.png",
+      filename = "__ballista-turret__/graphics/entities/steel-bolt-projectile.png",
       width = 16,
       height = 210,
       scale = 0.5,
@@ -119,7 +119,7 @@ data:extend({
   {
     type = "ammo",
     name = "charged-bolt",
-    icon = "__pirate-fleet-graphics__/icons/charged-bolt.png",
+    icon = "__ballista-turret__/graphics/icons/charged-bolt.png",
     order = "vb",
     ammo_category = "bolt",
     subgroup = "ammo",
@@ -136,7 +136,7 @@ data:extend({
       {
         type = "line",
         range = 45,
-        width = 1,
+        width = 2,
         force = "enemy",
         range_effects =
         {
@@ -150,7 +150,7 @@ data:extend({
           target_effects =
           {
             type = "damage",
-            damage = { amount = 300, type = "piercing" }
+            damage = { amount = 750, type = "piercing" }
           },
         }
       }
@@ -159,7 +159,7 @@ data:extend({
   {
     type = "explosion",
     name = "charged-bolt-beam",
-    icon = "__pirate-fleet-graphics__/icons/charged-bolt.png",
+    icon = "__ballista-turret__/graphics/icons/charged-bolt.png",
     flags = { "not-on-map" },
     hidden = true,
     subgroup = "explosions",
@@ -168,7 +168,7 @@ data:extend({
     animations =
     {
       {
-        filename = "__pirate-fleet-graphics__/entities/ballista-turret/charged-bolt-beam.png",
+        filename = "__ballista-turret__/graphics/entities/charged-bolt-beam.png",
         priority = "extra-high",
         width = 32,
         height = 440,
@@ -200,7 +200,7 @@ data:extend({
   {
     type = "ammo",
     name = "ignition-bolt",
-    icon = "__pirate-fleet-graphics__/icons/ignition-bolt.png",
+    icon = "__ballista-turret__/graphics/icons/ignition-bolt.png",
     order = "vc",
     ammo_category = "bolt",
     subgroup = "ammo",
@@ -248,6 +248,13 @@ data:extend({
             damage = { amount = 100, type = "piercing" }
           },
           {
+            type = "create-fire",
+            entity_name = "fire-flame",
+            show_in_tooltip = true,
+            repeat_count = 5,
+            offset_deviation = { { -4, -4 }, { 4, 4 } },
+          },
+          {
             type = "invoke-tile-trigger",
             repeat_count = 1
           },
@@ -264,12 +271,7 @@ data:extend({
                 {
                   {
                     type = "damage",
-                    damage = { amount = 300, type = "fire" }
-                  },
-                  {
-                    type = "create-fire",
-                    entity_name = "fire-flame",
-                    offset_deviation = { { -1, -1 }, { 1, 1 } },
+                    damage = { amount = 500, type = "fire" }
                   },
                   {
                     type = "create-sticker",
@@ -286,7 +288,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__pirate-fleet-graphics__/entities/ballista-turret/steel-bolt-projectile.png",
+          filename = "__ballista-turret__/graphics/entities/steel-bolt-projectile.png",
           width = 64,
           height = 210,
           scale = 0.5,
@@ -295,7 +297,7 @@ data:extend({
           rotate_shift = true,
         },
         {
-          filename = "__pirate-fleet-graphics__/entities/ballista-turret/ignition-bolt-projectile.png",
+          filename = "__ballista-turret__/graphics/entities/ignition-bolt-projectile.png",
           width = 64,
           height = 210,
           frame_count = 8,
@@ -309,7 +311,7 @@ data:extend({
       }
     },
     shadow = {
-      filename = "__pirate-fleet-graphics__/entities/ballista-turret/steel-bolt-projectile.png",
+      filename = "__ballista-turret__/graphics/entities/steel-bolt-projectile.png",
       width = 64,
       height = 210,
       scale = 0.5,

@@ -6,15 +6,15 @@ local width = 448
 local height = 448
 
 local filenames = {
-  "__pirate-fleet-graphics__/entities/ballista-turret/ballista-turret-1.png",
-  "__pirate-fleet-graphics__/entities/ballista-turret/ballista-turret-2.png",
-  "__pirate-fleet-graphics__/entities/ballista-turret/ballista-turret-3.png",
-  "__pirate-fleet-graphics__/entities/ballista-turret/ballista-turret-4.png",
+  "__ballista-turret__/graphics/entities/ballista-turret-1.png",
+  "__ballista-turret__/graphics/entities/ballista-turret-2.png",
+  "__ballista-turret__/graphics/entities/ballista-turret-3.png",
+  "__ballista-turret__/graphics/entities/ballista-turret-4.png",
 }
 local shift = { 0, -0.75 }
 local function shadow_layers(frame_count)
   return {
-    filename = "__pirate-fleet-graphics__/entities/ballista-turret/ballista-turret-shadow.png",
+    filename = "__ballista-turret__/graphics/entities/ballista-turret-shadow.png",
     width = 384,
     height = 384,
     direction_count = 64,
@@ -32,7 +32,7 @@ data:extend({
   {
     type = "item",
     name = "ballista-turret",
-    icon = "__pirate-fleet-graphics__/icons/ballista-turret.png",
+    icon = "__ballista-turret__/graphics/icons/ballista-turret.png",
     order = "v",
     subgroup = "turret",
     stack_size = 20,
@@ -60,10 +60,10 @@ data:extend({
   {
     type = "ammo-turret",
     name = "ballista-turret",
-    icon = "__pirate-fleet-graphics__/icons/ballista-turret.png",
+    icon = "__ballista-turret__/graphics/icons/ballista-turret.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "ballista-turret" },
-    max_health = 800,
+    max_health = 600,
     corpse = "rocket-turret-remnants",
     dying_explosion = "gun-turret-explosion",
     collision_box = { { -1.2, -1.2 }, { 1.2, 1.2 } },
@@ -79,9 +79,7 @@ data:extend({
     starting_attack_speed = 0.25,
     ending_attack_speed = 0.025,
     resistances = {
-      { type = "fire",     percent = -30 },
       { type = "electric", percent = 80 },
-      { type = "physical", percent = 30 },
     },
     alert_when_attacking = true,
     circuit_connector = circuit_connector_definitions["gun-turret"],
@@ -164,7 +162,7 @@ data:extend({
       fire_penalty = 1,
       rotate_penalty = 1,
       health_penalty = 0.5,
-      projectile_center = { 0, shift[2] + 0.25 },
+      projectile_center = { 0, shift[2] + 0.4 },
       apply_projection_to_projectile_creation_position = false,
       range = 40,
       min_range = 8,
